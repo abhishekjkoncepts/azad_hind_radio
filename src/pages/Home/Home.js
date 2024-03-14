@@ -239,8 +239,9 @@ const Home = () => {
       sx={{
         background: "linear-gradient(to top , #1f083a, #2e0b3c )", // Example gradient colors
         width: "100%",
-        height: "100%", // Set the height as needed
+        height: "100vh", // Set the height as needed
       }}
+      display={{xs:"none" , lg:"block"}}
     >
       <Grid
         item
@@ -255,7 +256,7 @@ const Home = () => {
           flexDirection: "column",
         }}
       >
-        <Box display={{ xs: "none", lg: "block" }}>
+        <Box>
           {/* India Flag with text */}
           <Box
             sx={{
@@ -442,8 +443,9 @@ const Home = () => {
     sx={{
       background: "linear-gradient(to top , #1f083a, #2e0b3c )", // Example gradient colors
       width: "100%",
-      height: "100%", // Set the height as needed
+      height: "100vh", // Set the height as needed
     }}
+    display={{lg:"block"}}
   >
     <Grid
       item
@@ -631,7 +633,7 @@ const Home = () => {
           </Marquee>
         </Box>
 
-        <Box sx={{ marginTop: "50px", display:"flex", justifyContent:"center" , alignItems:"center", marginBottom:"40px" }}>
+        <Box sx={{ marginTop: "50px", display:"flex", justifyContent:"center" , alignItems:"center", marginBottom:"20px"}}>
           <audio
             id="audio-element"
             src={require("../../assets/sounds/Ae_watan.mp3")}
