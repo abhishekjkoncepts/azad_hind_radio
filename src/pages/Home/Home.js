@@ -627,7 +627,7 @@ const Home = () => {
           </Marquee>
         </Box>
 
-        <Box sx={{ marginTop: "50px" }}>
+        <Box sx={{ marginTop: "50px", display:"flex", justifyContent:"center" , alignItems:"center", }}>
           <audio
             id="audio-element"
             src={require("../../assets/sounds/Ae_watan.mp3")}
