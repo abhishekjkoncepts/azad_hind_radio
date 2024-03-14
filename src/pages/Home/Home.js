@@ -456,6 +456,9 @@ const Home = () => {
         // justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        background: "linear-gradient(to top , #1f083a, #2e0b3c )", // Example gradient colors
+      width: "100%",
+      height: "100%", // Set the height as needed
       }}
     >
       <Box display={{lg: "none" }}>
@@ -578,7 +581,7 @@ const Home = () => {
           <AudioSpectrum
             id="audio-canvas"
             height={15}
-            width={400}
+            width={20}
             audioId={"audio-element"}
             // capColor={"red"}
             capHeight={2}
@@ -589,7 +592,7 @@ const Home = () => {
               { stop: 0.5, color: "#0CD7FD" },
               { stop: 1, color: "#fff" },
             ]}
-            gap={4}
+            // gap={4}
             // height={10}
           />
         </Box>
@@ -597,21 +600,22 @@ const Home = () => {
         <Box
           sx={{
             marginTop: "30px",
+            display:"flex", justifyContent:"center", alignItems:"center" 
           }}
         >
-          <Marquee style={{ width: "400px" }}>
+          <Marquee style={{ width: "80%", }}>
             <Typography
               sx={{
                 color: "#fff",
                 fontSize: {
-                  xs: "14px",
-                  sm: "14px",
+                  xs: "18px",
+                  sm: "18px",
                   md: "15px",
                   lg: "15px",
                 },
                 fontWeight: {
-                  xs: "500",
-                  sm: "500",
+                  xs: "300",
+                  sm: "300",
                   md: "200",
                   lg: "200",
                 },
@@ -622,12 +626,12 @@ const Home = () => {
                 // wordSpacing:"5px"
               }}
             >
-              LISTING NETAJI SUBHASH FREEDOM FIGHTER
+              YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE  SPEAKING FROM GERMANY IN THE FILM 'AYE WATAN MERE WATAN'
             </Typography>
           </Marquee>
         </Box>
 
-        <Box sx={{ marginTop: "50px", display:"flex", justifyContent:"center" , alignItems:"center", }}>
+        <Box sx={{ marginTop: "50px", display:"flex", justifyContent:"center" , alignItems:"center", marginBottom:"40px" }}>
           <audio
             id="audio-element"
             src={require("../../assets/sounds/Ae_watan.mp3")}
