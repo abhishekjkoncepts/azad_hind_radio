@@ -254,6 +254,7 @@ const Home = () => {
           // justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          
         }}
       >
         <Box>
@@ -310,7 +311,7 @@ const Home = () => {
 
           {/* Radio image */}
 
-          <Box sx={{ marginTop: "40px" }}>
+          <Box sx={{ marginTop: "40px" , display:"flex", justifyContent:"center", alignItems:"center"}}>
             <Box
               component="img"
               src={radio}
@@ -445,7 +446,7 @@ const Home = () => {
       width: "100%",
       height: "100vh", // Set the height as needed
     }}
-    display={{lg:"block"}}
+    display={{lg: "none", md:"none" }}
   >
     <Grid
       item
@@ -463,7 +464,7 @@ const Home = () => {
       height: "100%", // Set the height as needed
       }}
     >
-      <Box display={{lg: "none" }}>
+      <Box >
         {/* India Flag with text */}
         <Box
           sx={{
@@ -579,11 +580,11 @@ const Home = () => {
           />
         </Box>
 
-        <Box sx={{ marginTop: "20px" , display:"flex", justifyContent:"center" , alignItems:"center", }}>
+        {/* <Box sx={{ marginTop: "20px" , display:"flex", justifyContent:"center" , alignItems:"center",border:"2px solid red" }}> */}
           <AudioSpectrum
             id="audio-canvas"
-            height={15}
-            width={20}
+            height={45}
+            width={100}
             audioId={"audio-element"}
             // capColor={"red"}
             capHeight={2}
@@ -594,10 +595,10 @@ const Home = () => {
               { stop: 0.5, color: "#0CD7FD" },
               { stop: 1, color: "#fff" },
             ]}
-            // gap={4}
+            gap={4}
             // height={10}
           />
-        </Box>
+        {/* </Box> */}
         {/* netaji text */}
         <Box
           sx={{
@@ -633,7 +634,7 @@ const Home = () => {
           </Marquee>
         </Box>
 
-        <Box sx={{ marginTop: "50px", display:"flex", justifyContent:"center" , alignItems:"center", marginBottom:"20px"}}>
+        <Box sx={{ marginTop: "100px", display:"flex", justifyContent:"center" , alignItems:"center", marginBottom:"20px"}}>
           <audio
             id="audio-element"
             src={require("../../assets/sounds/Ae_watan.mp3")}
