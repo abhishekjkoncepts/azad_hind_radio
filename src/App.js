@@ -4,12 +4,13 @@ import React from "react";
 import { Box } from "@mui/material";
 
 import Navigation from "./navigation/Navigation";
-import Example from "./pages/Home/Example";
+import Radiopage from "./pages/RadioPage/Radiopage";
 
 const App = () => {
   return (
     <Box flex={1}>
-      <Navigation />  
+      {/* <Navigation />   */}
+      <Radiopage/>
     </Box>
   );
 };
