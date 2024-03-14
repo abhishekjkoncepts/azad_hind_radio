@@ -27,11 +27,11 @@ const Radiopage = () => {
       <Box
         sx={{
           width: "100%",
-        //   height: "100vh",
+          //   height: "100vh",
           background: "linear-gradient(to top , #1f083a, #2e0b3c )",
         }}
       >
-        <Grid container >
+        <Grid container>
           <Grid
             item
             xs={12}
@@ -43,8 +43,6 @@ const Radiopage = () => {
             //   justifyContent: "center",
             //   alignItem: "center",
             // }}
-            
-
           >
             <Box
               sx={{
@@ -60,7 +58,7 @@ const Radiopage = () => {
                   md: "50px",
                   lg: "50px",
                 },
-                height:"100vh"
+                height: "100vh",
               }}
             >
               {/* India Flag with text */}
@@ -218,7 +216,7 @@ const Radiopage = () => {
               </Box>
 
               {/* Audio Spectrum - DeskTop*/}
-              <Box >
+              <Box>
                 <Box
                   sx={{
                     display: "flex",
@@ -234,19 +232,19 @@ const Radiopage = () => {
                 >
                   <AudioSpectrum
                     id="audio-canvas"
-                    height={10}
+                    height={13}
                     width={300}
                     audioId={"audio-element"}
                     capColor={"#fff"}
                     capHeight={2}
-                    meterWidth={2}
+                    meterWidth={1}
                     meterCount={512}
                     meterColor={[
                       { stop: 0, color: "#fff" },
                       { stop: 0.5, color: "#0CD7FD" },
                       { stop: 1, color: "#fff" },
                     ]}
-                    gap={4}
+                    gap={2}
                     // height={10}
                   />
                 </Box>
@@ -287,7 +285,7 @@ const Radiopage = () => {
                 </Box>
               </Box> */}
 
-               {/* MArquee for desktop */}
+              {/* MArquee for desktop */}
               <Box display={{ xs: "none", lg: "block" }}>
                 <Box
                   sx={{
@@ -307,13 +305,14 @@ const Radiopage = () => {
                     }}
                   >
                     YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE SPEAKING FROM
-                    GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </Marquee>
                 </Box>
               </Box>
 
-               {/* MArquee for desktop */}
-               <Box display={{ xs: "", lg: "none" }}>
+              {/* MArquee for desktop */}
+              <Box display={{ xs: "", lg: "none" }}>
                 <Box
                   sx={{
                     marginTop: "30px",
@@ -332,30 +331,30 @@ const Radiopage = () => {
                     }}
                   >
                     YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE SPEAKING FROM
-                    GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </Marquee>
                 </Box>
               </Box>
 
-
-{/* Button */}
+              {/* Button */}
               <Box
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  marginTop:{
-                    xs:"80px",
-                    sm:"80px",
-                    md:"60px",
-                    lg:"60px"
+                  marginTop: {
+                    xs: "80px",
+                    sm: "80px",
+                    md: "60px",
+                    lg: "60px",
                   },
-                  marginBottom:{
-                    xs:"0px",
-                    sm:"0px",
-                    md:"0px",
-                    lg:"0px"
-                  }
+                  marginBottom: {
+                    xs: "0px",
+                    sm: "0px",
+                    md: "0px",
+                    lg: "0px",
+                  },
                 }}
               >
                 <audio
