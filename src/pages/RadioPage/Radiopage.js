@@ -354,6 +354,7 @@ const Radiopage = () => {
                         fontFamily: "Poppins, sans-serif",
                         fontWeight: "300",
                       }}
+                      speed={30}
                     >
                       YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE SPEAKING FROM
                       GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
