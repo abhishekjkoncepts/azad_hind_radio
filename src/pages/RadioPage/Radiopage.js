@@ -21,10 +21,19 @@ import radio from "../../assets/images/radio.png";
 import IndianFlag from "../../assets/images/india.png";
 import rightarrow from "../../assets/images/rightArrowIcon.png";
 import leftarrow from "../../assets/images/leftArrowIcon.png";
+import forward from "../../assets/images/forwardArrow.png";
+import backward from "../../assets/images/backwardArrow.png";
+import play from "../../assets/images/play.png";
+import pause from "../../assets/images/pause.png";
+
 // Marquee
 import Marquee from "react-fast-marquee";
 
 const Radiopage = () => {
+  const [ToggleButton, setToggleButton] = useState(true);
+
+  const song = new Audio(AeWatan);
+
   return (
     <>
       <Box
@@ -254,7 +263,7 @@ const Radiopage = () => {
                       id="audio-canvas"
                       height={13}
                       width={300}
-                      audioId={"audio-element"}
+                      audioEle={song}
                       capColor={"#fff"}
                       capHeight={2}
                       meterWidth={1}
@@ -270,41 +279,6 @@ const Radiopage = () => {
                   </Fade>
                 </Box>
               </Box>
-
-              {/* Audio Spectrum - Mobile*/}
-              {/* <Box >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginTop: {
-                      xs: "15px",
-                      sm: "15px",
-                      md: "10px",
-                      lg: "10px",
-                    },
-                  }}
-                >
-                  <AudioSpectrum
-                    id="audio-canvas"
-                    height={10}
-                    width={350}
-                    audioId={"audio-element"}
-                    capColor={"#fff"}
-                    capHeight={2}
-                    meterWidth={2}
-                    meterCount={512}
-                    meterColor={[
-                      { stop: 0, color: "#fff" },
-                      { stop: 0.5, color: "#0CD7FD" },
-                      { stop: 1, color: "#fff" },
-                    ]}
-                    gap={4}
-                    // height={10}
-                  />
-                </Box>
-              </Box> */}
 
               {/* MArquee for desktop */}
               <Box display={{ xs: "none", lg: "block" }}>
@@ -385,11 +359,43 @@ const Radiopage = () => {
                 }}
               >
                 <Fade direction="up">
-                  <audio
+                  {/* <audio
                     id="audio-element"
                     src={require("../../assets/sounds/Ae_watan.mp3")}
                     controls
-                  ></audio>
+                    autoPlay={true}
+                  /> */}
+                  <audio id="audio-element">
+                    <source src={song} type="audio/mpeg" />
+                  </audio>
+                  {ToggleButton ? (
+                    <Box
+                      component="img"
+                      src={play}
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                      }}
+                      onClick={() => {
+                        song.play();
+                        setToggleButton(false);
+                      }}
+                    />
+                  ) : (
+                    <Box
+                      component="img"
+                      src={pause}
+                      sx={{
+                        height: "50px",
+                        width: "50px",
+                      }}
+                      onClick={() => {
+                        console.log("Pause", song.paused);
+                        song.pause();
+                        setToggleButton(true);
+                      }}
+                    />
+                  )}
                 </Fade>
               </Box>
             </Box>
