@@ -25,6 +25,7 @@ import forward from "../../assets/images/forwardArrow.png";
 import backward from "../../assets/images/backwardArrow.png";
 import play from "../../assets/images/play.png";
 import pause from "../../assets/images/pause.png";
+import scb from "../../assets/images/scb.png"
 
 // Marquee
 import Marquee from "react-fast-marquee";
@@ -41,6 +42,7 @@ const Radiopage = () => {
           width: "100%",
           //   height: "100vh",
           background: "linear-gradient(to top , #1f083a, #2e0b3c )",
+         
         }}
       >
         <Grid container>
@@ -72,6 +74,7 @@ const Radiopage = () => {
                 },
                 height: "100vh",
               }}
+
             >
               {/* India Flag with text */}
               <Box
@@ -365,6 +368,16 @@ const Radiopage = () => {
                     controls
                     autoPlay={true}
                   /> */}
+                  <Box
+                      component="img"
+                      src={backward}
+                      sx={{
+                        height: "60px",
+                        width: "70px",
+                        marginRight:"30px"
+                      }}
+                     
+                    />
                   <audio id="audio-element">
                     <source src={song} type="audio/mpeg" />
                   </audio>
@@ -373,8 +386,8 @@ const Radiopage = () => {
                       component="img"
                       src={play}
                       sx={{
-                        height: "50px",
-                        width: "50px",
+                        height: "60px",
+                        width: "70px",
                       }}
                       onClick={() => {
                         song.play();
@@ -386,8 +399,8 @@ const Radiopage = () => {
                       component="img"
                       src={pause}
                       sx={{
-                        height: "50px",
-                        width: "50px",
+                        height: "60px",
+                        width: "70px",
                       }}
                       onClick={() => {
                         console.log("Pause", song.paused);
@@ -396,6 +409,16 @@ const Radiopage = () => {
                       }}
                     />
                   )}
+                  <Box
+                      component="img"
+                      src={forward}
+                      sx={{
+                        height: "60px",
+                        width: "70px",
+                        marginLeft:"30px"
+                      }}
+                      
+                    />
                 </Fade>
               </Box>
             </Box>
