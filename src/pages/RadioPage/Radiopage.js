@@ -368,6 +368,7 @@ const Radiopage = () => {
                     controls
                     autoPlay={true}
                   /> */}
+                  <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
                   <Box
                       component="img"
                       src={backward}
@@ -419,6 +420,7 @@ const Radiopage = () => {
                       }}
                       
                     />
+                    </Box>
                 </Fade>
               </Box>
             </Box>
