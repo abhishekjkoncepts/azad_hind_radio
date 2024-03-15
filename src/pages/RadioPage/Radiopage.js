@@ -10,7 +10,7 @@ import "./Radiopage.css";
 import AudioSpectrum from "react-audio-spectrum";
 
 // React-awesome-reveal
-import { Fade, Flip, Roll, Zoom , Rotate , Bounce} from "react-awesome-reveal";
+import { Fade, Flip, Roll, Zoom, Rotate, Bounce } from "react-awesome-reveal";
 
 // Audio
 import AeWatan from "../../assets/sounds/Ae_watan.mp3";
@@ -117,6 +117,7 @@ const Radiopage = () => {
               </Box>
 
               {/* Azad hind image */}
+
               <Box
                 sx={{
                   display: "flex",
@@ -124,7 +125,7 @@ const Radiopage = () => {
                   alignItems: "center",
                 }}
               >
-                <Roll direction="right">
+                <Zoom>
                   <Box
                     component="img"
                     src={AzadHind}
@@ -143,7 +144,7 @@ const Radiopage = () => {
                       },
                     }}
                   />
-                </Roll>
+                </Zoom>
               </Box>
 
               {/* Radio image */}
@@ -248,24 +249,24 @@ const Radiopage = () => {
                     },
                   }}
                 >
-                <Fade direction="down">
-                  <AudioSpectrum
-                    id="audio-canvas"
-                    height={13}
-                    width={300}
-                    audioId={"audio-element"}
-                    capColor={"#fff"}
-                    capHeight={2}
-                    meterWidth={1}
-                    meterCount={512}
-                    meterColor={[
-                      { stop: 0, color: "#fff" },
-                      { stop: 0.5, color: "#0CD7FD" },
-                      { stop: 1, color: "#fff" },
-                    ]}
-                    gap={2}
-                    // height={10}
-                  />
+                  <Fade direction="down">
+                    <AudioSpectrum
+                      id="audio-canvas"
+                      height={13}
+                      width={300}
+                      audioId={"audio-element"}
+                      capColor={"#fff"}
+                      capHeight={2}
+                      meterWidth={1}
+                      meterCount={512}
+                      meterColor={[
+                        { stop: 0, color: "#fff" },
+                        { stop: 0.5, color: "#0CD7FD" },
+                        { stop: 1, color: "#fff" },
+                      ]}
+                      gap={2}
+                      // height={10}
+                    />
                   </Fade>
                 </Box>
               </Box>
@@ -316,50 +317,51 @@ const Radiopage = () => {
                     //   border: "2px solid red",
                   }}
                 >
-                <Bounce >
-                  <Marquee
-                    style={{
-                      width: "340px",
-                      color: "#fff",
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: "300",
-                    }}
-                  >
-                    YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE SPEAKING FROM
-                    GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </Marquee>
+                  <Bounce>
+                    <Marquee
+                      style={{
+                        width: "340px",
+                        color: "#fff",
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "300",
+                      }}
+                      speed={25}
+                    >
+                      YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE SPEAKING FROM
+                      GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </Marquee>
                   </Bounce>
                 </Box>
               </Box>
 
               {/* MArquee for desktop */}
-              <Box display={{ xs: "", lg: "none" }}>
-                <Box
-                  sx={{
-                    marginTop: "30px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    //   border: "2px solid red",
-                  }}
-                >
-                 <Bounce >
-                  <Marquee
-                    style={{
-                      width: "80%",
-                      color: "#fff",
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: "300",
+              <Bounce>
+                <Box display={{ xs: "", lg: "none" }}>
+                  <Box
+                    sx={{
+                      marginTop: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      //   border: "2px solid red",
                     }}
                   >
-                    YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE SPEAKING FROM
-                    GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </Marquee>
-                  </Bounce>
+                    <Marquee
+                      style={{
+                        width: "80%",
+                        color: "#fff",
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "300",
+                      }}
+                    >
+                      YOU'RE LISTENING NETAJI SUBHAS CHANDRA BOSE SPEAKING FROM
+                      GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </Marquee>
+                  </Box>
                 </Box>
-              </Box>
+              </Bounce>
 
               {/* Button */}
               <Box
@@ -381,14 +383,13 @@ const Radiopage = () => {
                   },
                 }}
               >
-              <Fade direction="up">
-                <audio
-                  id="audio-element"
-                  src={require("../../assets/sounds/Ae_watan.mp3")}
-                  controls
-                ></audio>
+                <Fade direction="up">
+                  <audio
+                    id="audio-element"
+                    src={require("../../assets/sounds/Ae_watan.mp3")}
+                    controls
+                  ></audio>
                 </Fade>
-
               </Box>
             </Box>
           </Grid>
