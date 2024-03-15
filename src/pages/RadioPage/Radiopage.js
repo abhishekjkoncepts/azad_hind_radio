@@ -9,6 +9,9 @@ import "./Radiopage.css";
 // Audio-Spectrum
 import AudioSpectrum from "react-audio-spectrum";
 
+// React-awesome-reveal
+import { Fade, Flip, Roll, Zoom , Rotate , Bounce} from "react-awesome-reveal";
+
 // Audio
 import AeWatan from "../../assets/sounds/Ae_watan.mp3";
 
@@ -76,36 +79,41 @@ const Radiopage = () => {
                   alignItems: "center",
                 }}
               >
-                <Box
-                  component="img"
-                  src={IndianFlag}
-                  sx={{
-                    height: "25px",
-                    width: "26px",
-                    marginRight: "10px",
-                  }}
-                />
-                <Typography
-                  sx={{
-                    color: "#fff",
-                    fontSize: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    fontWeight: {
-                      xs: "500",
-                      sm: "500",
-                      md: "400",
-                      lg: "400",
-                    },
-                    fontFamily: "Poppins, sans-serif",
-                    textAlign: "center",
-                  }}
-                >
-                  Delhi
-                </Typography>
+                <Fade direction="left">
+                  <Box
+                    component="img"
+                    src={IndianFlag}
+                    sx={{
+                      height: "25px",
+                      width: "26px",
+                      marginRight: "10px",
+                    }}
+                  />
+                </Fade>
+
+                <Fade direction="right">
+                  <Typography
+                    sx={{
+                      color: "#fff",
+                      fontSize: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      fontWeight: {
+                        xs: "500",
+                        sm: "500",
+                        md: "400",
+                        lg: "400",
+                      },
+                      fontFamily: "Poppins, sans-serif",
+                      textAlign: "center",
+                    }}
+                  >
+                    Delhi
+                  </Typography>
+                </Fade>
               </Box>
 
               {/* Azad hind image */}
@@ -116,24 +124,26 @@ const Radiopage = () => {
                   alignItems: "center",
                 }}
               >
-                <Box
-                  component="img"
-                  src={AzadHind}
-                  sx={{
-                    height: {
-                      xs: "150px",
-                      sm: "150px",
-                      md: "170px",
-                      lg: "170px",
-                    },
-                    width: {
-                      xs: "290px",
-                      sm: "290px",
-                      md: "330px",
-                      lg: "330px",
-                    },
-                  }}
-                />
+                <Roll direction="right">
+                  <Box
+                    component="img"
+                    src={AzadHind}
+                    sx={{
+                      height: {
+                        xs: "150px",
+                        sm: "150px",
+                        md: "170px",
+                        lg: "170px",
+                      },
+                      width: {
+                        xs: "290px",
+                        sm: "290px",
+                        md: "330px",
+                        lg: "330px",
+                      },
+                    }}
+                  />
+                </Roll>
               </Box>
 
               {/* Radio image */}
@@ -145,11 +155,13 @@ const Radiopage = () => {
                   alignItems: "center",
                 }}
               >
-                <Box
-                  component="img"
-                  src={radio}
-                  sx={{ height: "110px", width: "105px" }}
-                />
+                <Zoom>
+                  <Box
+                    component="img"
+                    src={radio}
+                    sx={{ height: "110px", width: "105px" }}
+                  />
+                </Zoom>
               </Box>
 
               {/* Text with Arrows */}
@@ -162,57 +174,63 @@ const Radiopage = () => {
                   marginTop: "25px",
                 }}
               >
-                <Box
-                  component="img"
-                  src={leftarrow}
-                  sx={{
-                    height: "40px",
-                    width: "40px",
-                  }}
-                />
+                <Fade direction="left">
+                  <Box
+                    component="img"
+                    src={leftarrow}
+                    sx={{
+                      height: "40px",
+                      width: "40px",
+                    }}
+                  />
+                </Fade>
 
-                <Typography
-                  sx={{
-                    color: "#fff",
-                    fontSize: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                    fontWeight: {
-                      xs: "300",
-                      sm: "300",
-                      md: "300",
-                      lg: "300",
-                    },
-                    fontFamily: "Poppins, sans-serif",
-                    textAlign: "center",
-                    marginLeft: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "40px",
-                      lg: "40px",
-                    },
-                    marginRight: {
-                      xs: "20px",
-                      sm: "20px",
-                      md: "40px",
-                      lg: "40px",
-                    },
-                  }}
-                >
-                  AZAD HIND RADIO
-                </Typography>
+                <Fade direction="up">
+                  <Typography
+                    sx={{
+                      color: "#fff",
+                      fontSize: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                      fontWeight: {
+                        xs: "300",
+                        sm: "300",
+                        md: "300",
+                        lg: "300",
+                      },
+                      fontFamily: "Poppins, sans-serif",
+                      textAlign: "center",
+                      marginLeft: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                      marginRight: {
+                        xs: "20px",
+                        sm: "20px",
+                        md: "40px",
+                        lg: "40px",
+                      },
+                    }}
+                  >
+                    AZAD HIND RADIO
+                  </Typography>
+                </Fade>
 
-                <Box
-                  component="img"
-                  src={rightarrow}
-                  sx={{
-                    height: "45px",
-                    width: "45px",
-                  }}
-                />
+                <Fade direction="right">
+                  <Box
+                    component="img"
+                    src={rightarrow}
+                    sx={{
+                      height: "45px",
+                      width: "45px",
+                    }}
+                  />
+                </Fade>
               </Box>
 
               {/* Audio Spectrum - DeskTop*/}
@@ -230,6 +248,7 @@ const Radiopage = () => {
                     },
                   }}
                 >
+                <Fade direction="down">
                   <AudioSpectrum
                     id="audio-canvas"
                     height={13}
@@ -247,6 +266,7 @@ const Radiopage = () => {
                     gap={2}
                     // height={10}
                   />
+                  </Fade>
                 </Box>
               </Box>
 
@@ -296,6 +316,7 @@ const Radiopage = () => {
                     //   border: "2px solid red",
                   }}
                 >
+                <Bounce >
                   <Marquee
                     style={{
                       width: "340px",
@@ -308,6 +329,7 @@ const Radiopage = () => {
                     GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </Marquee>
+                  </Bounce>
                 </Box>
               </Box>
 
@@ -322,6 +344,7 @@ const Radiopage = () => {
                     //   border: "2px solid red",
                   }}
                 >
+                 <Bounce >
                   <Marquee
                     style={{
                       width: "80%",
@@ -334,6 +357,7 @@ const Radiopage = () => {
                     GERMANY IN THE FILM 'AYE WATAN MERE WATAN'&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </Marquee>
+                  </Bounce>
                 </Box>
               </Box>
 
@@ -357,11 +381,14 @@ const Radiopage = () => {
                   },
                 }}
               >
+              <Fade direction="up">
                 <audio
                   id="audio-element"
                   src={require("../../assets/sounds/Ae_watan.mp3")}
                   controls
                 ></audio>
+                </Fade>
+
               </Box>
             </Box>
           </Grid>
