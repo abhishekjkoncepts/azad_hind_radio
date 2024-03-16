@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 // material-ui
 import { Box, Grid, Typography } from "@mui/material";
@@ -25,15 +25,32 @@ import forward from "../../assets/images/forwardArrow.png";
 import backward from "../../assets/images/backwardArrow.png";
 import play from "../../assets/images/play.png";
 import pause from "../../assets/images/pause.png";
-import scb from "../../assets/images/scb.png"
+import scb from "../../assets/images/scb.png";
 
 // Marquee
 import Marquee from "react-fast-marquee";
 
 const Radiopage = () => {
   const [ToggleButton, setToggleButton] = useState(true);
+  const [song] = useState(new Audio(AeWatan));
 
-  const song = new Audio(AeWatan);
+  useEffect(() => {
+    // Clean up the audio when component unmounts
+    return () => {
+      song.pause();
+      song.currentTime = 0;
+    };
+  }, [song]); // Run this effect whenever song changes
+
+  const playSong = () => {
+    song.play();
+    setToggleButton(false);
+  };
+
+  const pauseSong = () => {
+    song.pause();
+    setToggleButton(true);
+  };
 
   return (
     <>
@@ -42,7 +59,6 @@ const Radiopage = () => {
           width: "100%",
           //   height: "100vh",
           background: "linear-gradient(to top , #1f083a, #2e0b3c )",
-         
         }}
       >
         <Grid container>
@@ -74,7 +90,6 @@ const Radiopage = () => {
                 },
                 height: "100vh",
               }}
-
             >
               {/* India Flag with text */}
               <Box
@@ -368,7 +383,7 @@ const Radiopage = () => {
                     controls
                     autoPlay={true}
                   /> */}
-                  <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+                  {/* <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
                   <Box
                       component="img"
                       src={backward}
@@ -420,7 +435,58 @@ const Radiopage = () => {
                       }}
                       
                     />
-                    </Box>
+                    </Box> */}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={backward}
+                      sx={{
+                        height: "60px",
+                        width: "70px",
+                        marginRight: "30px",
+                      }}
+                    />
+                    <audio id="audio-element">
+                      <source src={song} type="audio/mpeg" />
+                    </audio>
+                    {ToggleButton ? (
+                      <Box
+                        component="img"
+                        src={play}
+                        sx={{
+                          height: "60px",
+                          width: "70px",
+                        }}
+                        onClick={playSong} // Use playSong function
+                      />
+                    ) : (
+                      <Box
+                        component="img"
+                        src={pause}
+                        sx={{
+                          height: "60px",
+                          width: "70px",
+                        }}
+                        onClick={pauseSong} // Use pauseSong function
+                      />
+                    )}
+                    <Box
+                      component="img"
+                      src={forward}
+                      sx={{
+                        height: "60px",
+                        width: "70px",
+                        marginLeft: "30px",
+                      }}
+                    />
+                  </Box>
                 </Fade>
               </Box>
             </Box>
