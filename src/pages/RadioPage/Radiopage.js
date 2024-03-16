@@ -285,10 +285,10 @@ const Radiopage = () => {
                   <Fade direction="down">
                     <AudioSpectrum
                       id="audio-canvas"
-                      height={13}
+                      height={20}
                       width={300}
                       audioEle={song}
-                      capColor={"#fff"}
+                      capColor={"red"}
                       capHeight={2}
                       meterWidth={1}
                       meterCount={512}
@@ -297,7 +297,7 @@ const Radiopage = () => {
                         { stop: 0.5, color: "#0CD7FD" },
                         { stop: 1, color: "#fff" },
                       ]}
-                      gap={2}
+                      gap={4}
                       // height={10}
                     />
                   </Fade>
@@ -369,10 +369,10 @@ const Radiopage = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   marginTop: {
-                    xs: "80px",
-                    sm: "80px",
-                    md: "60px",
-                    lg: "60px",
+                    xs: "40px",
+                    sm: "40px",
+                    md: "40px",
+                    lg: "40px",
                   },
                   marginBottom: {
                     xs: "0px",
