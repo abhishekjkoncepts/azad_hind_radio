@@ -9,8 +9,8 @@ import Radiopage from "./pages/RadioPage/Radiopage";
 const App = () => {
   return (
     <Box flex={1}>
-      {/* <Navigation />   */}
-      <Radiopage/>
+      <Navigation />  
+      {/* <Radiopage/> */}
     </Box>
   );
 };
