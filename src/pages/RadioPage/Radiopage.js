@@ -12,6 +12,9 @@ import AudioSpectrum from "react-audio-spectrum";
 // React-awesome-reveal
 import { Fade, Flip, Roll, Zoom, Rotate, Bounce } from "react-awesome-reveal";
 
+// React-helmet
+import { Helmet } from "react-helmet";  
+
 // Audio
 import AeWatan from "../../assets/sounds/Ae_watan.mp3";
 
@@ -54,6 +57,9 @@ const Radiopage = () => {
 
   return (
     <>
+    <Helmet>
+    <title>Azad-Hind-Radio</title>  
+    </Helmet>
       <Box
         sx={{
           width: "100%",
