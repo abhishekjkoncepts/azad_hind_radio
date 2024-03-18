@@ -13,7 +13,7 @@ import AudioSpectrum from "react-audio-spectrum";
 import { Fade, Flip, Roll, Zoom, Rotate, Bounce } from "react-awesome-reveal";
 
 // React-helmet
-import { Helmet } from "react-helmet";  
+import { Helmet } from "react-helmet";
 
 // Audio
 import AeWatan from "../../assets/sounds/Ae_watan.mp3";
@@ -29,6 +29,8 @@ import backward from "../../assets/images/backwardArrow.png";
 import play from "../../assets/images/play.png";
 import pause from "../../assets/images/pause.png";
 import scb from "../../assets/images/scb.png";
+import playstore from "../../assets/images/playStoreIcon.png";
+import amazonprime from "../../assets/images/AmazonPrime.png";
 
 // Marquee
 import Marquee from "react-fast-marquee";
@@ -57,14 +59,15 @@ const Radiopage = () => {
 
   return (
     <>
-    <Helmet>
-    <title>Azad-Hind-Radio</title>  
-    </Helmet>
+      <Helmet>
+        <title>Azad-Hind-Radio</title>
+      </Helmet>
       <Box
         sx={{
           width: "100%",
-          //   height: "100vh",
-          background: "linear-gradient(to top , #1f083a, #2e0b3c )",
+          height: "100%",
+          // background: "linear-gradient(to top , #1f083a, #2e0b3c )",
+          background: "linear-gradient(to top, #17347e 20%,  #5c1a77 80%)",
         }}
       >
         <Grid container>
@@ -81,30 +84,30 @@ const Radiopage = () => {
             // }}
           >
             <Box
-              sx={{
-                marginTop: {
-                  xs: "20px",
-                  sm: "20px",
-                  md: "50px",
-                  lg: "50px",
-                },
-                marginBottom: {
-                  xs: "0px",
-                  sm: "0px",
-                  md: "50px",
-                  lg: "50px",
-                },
-                height: "100vh",
-              }}
+              // sx={{
+              //   marginTop: {
+              //     xs: "10px",
+              //     sm: "10px",
+              //     md: "50px",
+              //     lg: "50px",
+              //   },
+              //   marginBottom: {
+              //     xs: "0px",
+              //     sm: "0px",
+              //     md: "50px",
+              //     lg: "50px",
+              //   },
+              //   // height: "100vh",
+              // }}
             >
               {/* India Flag with text */}
               <Box
                 sx={{
                   marginTop: {
-                    xs: "50px",
-                    sm: "50px",
-                    md: "70px",
-                    lg: "70px",
+                    xs: "30px",
+                    sm: "30px",
+                    md: "30px",
+                    lg: "30px",
                   },
                   display: "flex",
                   flexDirection: "row",
@@ -164,14 +167,14 @@ const Radiopage = () => {
                     src={AzadHind}
                     sx={{
                       height: {
-                        xs: "150px",
-                        sm: "150px",
+                        xs: "130px",
+                        sm: "130px",
                         md: "170px",
                         lg: "170px",
                       },
                       width: {
-                        xs: "290px",
-                        sm: "290px",
+                        xs: "240px",
+                        sm: "240px",
                         md: "330px",
                         lg: "330px",
                       },
@@ -362,6 +365,78 @@ const Radiopage = () => {
                 </Box>
               </Bounce>
 
+              {/* Listen on */}
+
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#fff",
+                    fontSize: {
+                      xs: "12px",
+                      sm: "12px",
+                      md: "14px",
+                      lg: "14px",
+                    },
+                    fontWeight: {
+                      xs: "400",
+                      sm: "400",
+                      md: "400",
+                      lg: "400",
+                    },
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    marginTop: {
+                      xs: "5px",
+                      sm: "5px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                  }}
+                >
+                  Listen on
+                </Typography>
+              </Box>
+
+              {/* AmazonPrime */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: {
+                    xs: "5px",
+                    sm: "5px",
+                    md: "5px",
+                    lg: "5px",
+                  },
+                }}
+              >
+                <Box
+                  component="img"
+                  src={amazonprime}
+                  sx={{
+                    height: {
+                      xs: "50px",
+                      sm: "50px",
+                      md: "60px",
+                      lg: "60px",
+                    },
+                    width: {
+                      xs: "120px",
+                      sm: "120px",
+                      md: "140px",
+                      lg: "140px",
+                    },
+                  }}
+                />
+              </Box>
+
               {/* Button */}
               <Box
                 sx={{
@@ -369,10 +444,10 @@ const Radiopage = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   marginTop: {
-                    xs: "40px",
-                    sm: "40px",
-                    md: "40px",
-                    lg: "40px",
+                    xs: "10px",
+                    sm: "10px",
+                    md: "10px",
+                    lg: "10px",
                   },
                   marginBottom: {
                     xs: "0px",
@@ -495,6 +570,127 @@ const Radiopage = () => {
                   </Box>
                 </Fade>
               </Box>
+
+              {/* Download */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#fff",
+                    fontSize: {
+                      xs: "18px",
+                      sm: "18px",
+                      md: "18px",
+                      lg: "18px",
+                    },
+                    fontWeight: {
+                      xs: "500",
+                      sm: "500",
+                      md: "500",
+                      lg: "500",
+                    },
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    marginTop: {
+                      xs: "5px",
+                      sm: "5px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                  }}
+                >
+                  Download
+                </Typography>
+              </Box>
+
+              {/* the azad hind radio app */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop:"-5px"
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#fff",
+                    fontSize: {
+                      xs: "12px",
+                      sm: "12px",
+                      md: "15px",
+                      lg: "15px",
+                    },
+                    fontWeight: {
+                      xs: "400",
+                      sm: "400",
+                      md: "300",
+                      lg: "300",
+                    },
+                    fontFamily: "Poppins, sans-serif",
+                    textAlign: "center",
+                    marginTop: {
+                      xs: "5px",
+                      sm: "5px",
+                      md: "10px",
+                      lg: "10px",
+                    },
+                  }}
+                >
+                  The{" "}
+                  <span
+                    style={{
+                      color: "#fff",
+                      fontSize: "16px",
+                      fontWeight: "400",
+                      fontFamily: "Poppins, sans-serif",
+                    }}
+                  >
+                    Azad Hind Radio
+                  </span>{" "}
+                  App!
+                </Typography>
+              </Box>
+
+              {/* play store logo*/}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "10px",
+                    lg: "10px",
+                  },
+                }}
+              >
+                <Box
+                  component="img"
+                  src={playstore}
+                  sx={{
+                    height: {
+                      xs: "50px",
+                      sm: "50px",
+                      md: "50px",
+                      lg: "50px",
+                    },
+                    width: {
+                      xs: "50px",
+                      sm: "50px",
+                      md: "50px",
+                      lg: "50px",
+                    },
+                  }}
+                />
+              </Box>
+              
             </Box>
           </Grid>
         </Grid>
