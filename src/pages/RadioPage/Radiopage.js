@@ -186,7 +186,7 @@ const Radiopage = () => {
               {/* Radio image */}
               <Box
                 sx={{
-                  marginTop: "25px",
+                  marginTop: "20px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -196,7 +196,7 @@ const Radiopage = () => {
                   <Box
                     component="img"
                     src={radio}
-                    sx={{ height: "110px", width: "105px" }}
+                    sx={{ height: "90px", width: "95px" }}
                   />
                 </Zoom>
               </Box>
@@ -208,7 +208,7 @@ const Radiopage = () => {
                   flexDirection: "row",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "25px",
+                  marginTop: "15px",
                 }}
               >
                 <Fade direction="left">
@@ -311,7 +311,7 @@ const Radiopage = () => {
               <Box display={{ xs: "none", lg: "block" }}>
                 <Box
                   sx={{
-                    marginTop: "30px",
+                    marginTop: "20px",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -336,12 +336,12 @@ const Radiopage = () => {
                 </Box>
               </Box>
 
-              {/* MArquee for desktop */}
+              {/* MArquee for mobile */}
               <Bounce>
                 <Box display={{ xs: "", lg: "none" }}>
                   <Box
                     sx={{
-                      marginTop: "30px",
+                      marginTop: "15px",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
@@ -384,8 +384,8 @@ const Radiopage = () => {
                       lg: "14px",
                     },
                     fontWeight: {
-                      xs: "400",
-                      sm: "400",
+                      xs: "500",
+                      sm: "500",
                       md: "400",
                       lg: "400",
                     },
@@ -444,16 +444,16 @@ const Radiopage = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   marginTop: {
+                    xs: "15px",
+                    sm: "15px",
+                    md: "15px",
+                    lg: "15px",
+                  },
+                  marginBottom: {
                     xs: "10px",
                     sm: "10px",
                     md: "10px",
                     lg: "10px",
-                  },
-                  marginBottom: {
-                    xs: "0px",
-                    sm: "0px",
-                    md: "0px",
-                    lg: "0px",
                   },
                 }}
               >
